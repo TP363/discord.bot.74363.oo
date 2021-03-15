@@ -5,9 +5,9 @@ exports.run = async (bot,message,args) => {
 
     if(args[0] < 1) return message.channel.send("You must delete at least one message!")
 
-    await message.channel.messages.fetch({limit: args[0]}).then(message => {
-        message.channel.bulkDelete(message);
-    });
+    await message.channel.messages.fetch({limit: args[0]}).then(message =>{
+        message.channel.bulkDelete(message)
+    })
 }
 
 
