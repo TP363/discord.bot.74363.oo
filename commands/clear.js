@@ -14,7 +14,7 @@ exports.run = async (bot,message,args) => {
 
     await message.channel.messages.fetch({ limit: args[0]}).then(messages =>{
         message.channel.bulkDelete(messages, deleteAmount, true)
-        message.reply(`***successfully*** Deleted ***${deleted.size}*** Messages.`).then(m => m.delete(5000));
+        message.reply(`***successfully*** Deleted ***${deleted.size}*** Messages.`);
 });
 
 }
