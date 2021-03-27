@@ -110,7 +110,8 @@ exports.run = async (bot,message,args,cmd,Discord) => {
 }
 
 exports.help = {
-name: 'play'
+name: 'play',
+aliases: ['skip', 'stop']           
 }
 
 
