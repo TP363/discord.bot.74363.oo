@@ -9,6 +9,11 @@ bot.commands = new Discord.Collection();
 
 
 bot.on('ready', () => {
+    
+        bot.user.setActivity('Use $help Command To See The Commands Of This Bot!', { type: 'PLAYING' })
+    .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
+    .catch(console.error);
+    
     console.log('The power of 363 server bot is online!')
     bot.user.setActivity('Use $help Command To See The Commands Of This Bot!', { type: 'PLAYING' })
   .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
